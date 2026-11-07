@@ -94,6 +94,15 @@ url("data:image/webp;base64,UklGRmacAABXRUJQVlA4IFqcAACQdwKdASqrAgAEPkkkj0YioiEj
   footer{flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.videos{border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.video-layout{display:grid;grid-template-columns:1fr minmax(0,380px);gap:clamp(28px,6vw,90px);align-items:center;max-width:1100px;margin:auto}
+.video-copy h2{font-size:clamp(44px,7vw,90px);line-height:.95;letter-spacing:-.045em;margin:0 0 28px}
+.video-copy p{color:var(--muted);font-size:20px;max-width:440px}
+.video-post{margin:0;min-width:0}
+.video-post video{display:block;width:100%;aspect-ratio:512/910;background:#111;border:1px solid var(--line);border-radius:16px;object-fit:contain}
+.video-post figcaption{color:var(--muted);font-size:13px;margin-top:12px}
+@media(max-width:800px){.video-layout{grid-template-columns:1fr}.video-post{width:100%;max-width:380px;margin:auto}}
 </style>
 </head>
 <body>
@@ -102,6 +111,7 @@ url("data:image/webp;base64,UklGRmacAABXRUJQVlA4IFqcAACQdwKdASqrAgAEPkkkj0YioiEj
   <div class="navlinks">
     <a href="#about">About</a>
     <a href="#live">Live</a>
+    <a href="#videos">Videos</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </div>
@@ -138,6 +148,23 @@ url("data:image/webp;base64,UklGRmacAABXRUJQVlA4IFqcAACQdwKdASqrAgAEPkkkj0YioiEj
     <div class="card card-onsdagsbandet"><strong>Onsdagsbandet</strong><span>Lead vocals · Norway</span></div>
     <div class="card card-fifty"><strong>FIFTY</strong><span>Rock vocalist · Live band</span></div>
     <div class="card card-acoustic"><strong>Acoustic & Events</strong><span>Private events · Corporate · Selected appearances</span></div>
+  </div>
+</section>
+
+<section class="videos" id="videos" aria-labelledby="videos-title">
+  <div class="video-layout">
+    <div class="video-copy">
+      <div class="section-label">Video</div>
+      <h2 id="videos-title">A moment<br>from the stage.</h2>
+      <p>Live music. Real energy. Press play for a glimpse of BIGGI on stage.</p>
+    </div>
+    <figure class="video-post">
+      <video controls playsinline preload="none" poster="biggi-live-2026-11.jpg" aria-label="BIGGI live performance">
+        <source src="biggi-live-2026-11.mp4" type="video/mp4">
+        <a href="biggi-live-2026-11.mp4">Watch BIGGI performing live</a>.
+      </video>
+      <figcaption>BIGGI · Live on stage</figcaption>
+    </figure>
   </div>
 </section>
 
